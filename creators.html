@@ -44,13 +44,10 @@ body {
 }
 
 .main {
-  margin: 0 auto;
-  width: 100%;
-  margin-left: 100px; 
-  /* Same as the width of the sidenav */
+  margin-left: 350px; /* Same as the width of the sidenav */
   font-size: 24px; 
   padding: 0px 30px;
-   
+  padding-right: 150px; 
 }
 
 .description {
@@ -83,12 +80,14 @@ body {
   
   <div class="main description">
     <div class="row">
-        <table class="table" >
-            <tbody>
+        <table class="table">
+        <thead>
                       <tr>
                         <th scope="row">Jayson Chen</th>
-                        <td>Jayson is a 3rd year studying Computer Science at UW.</td>
+                        <th scope="col">Jayson is a 3rd year studying Computer Science at UW.</th>
                       </tr>
+                    </thead>
+                    <tbody>
                       <tr>
                         <th scope="row">Stella Wang</th>
                         <td>Stella is a 2nd year studying Computer Engineering at UBC.</td>
@@ -99,7 +98,7 @@ body {
                       </tr>
                       <tr>
                         <th scope="row">Tiffany Kuo</th>
-                        <td>Tiffany is a 4th year studying Communication at NTU, currently on<br> an exchange program at UW.</td>
+                        <td>Tiffany is a 3rd year studying Computer Science at NTU, currently on an exchange program at UW.</td>
                       </tr>
                     </tbody>
                   </table>
