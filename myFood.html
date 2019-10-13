@@ -10,7 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <style>
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Be Vietnam', sans-serif;
 }
 
 .sidenav {
@@ -20,7 +20,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(188, 204, 228);
   overflow-x: hidden;
   padding-top: 20px;
   padding-left: 5px;
@@ -47,9 +47,10 @@ body {
 }
 
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+  margin-left: 250px; /* Same as the width of the sidenav */
   font-size: 24px; 
   padding: 0px 30px;
+  padding-right: 150px; 
 }
 
 .btn{
@@ -63,7 +64,6 @@ body {
     background-color: darkgoldenrod;
     border-color: transparent;
 }
-
 .overflow-auto{
     position:fixed;
     margin: 80px;
@@ -81,80 +81,94 @@ body {
 </style>
 </head>
 <body>
-    
-    <div class="sidenav">
-        <div class="vertical-center">
-        <p style="color: #f1f1f1; text-align: center; font-size:28px">Menu</p> <br>
-        <a href="index.html">About</a>
-        <a href="myFood.html">My Food</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="creators.html">Creators</a>
-            </div>
-      </div>
-      
-      <div class="main">
-        <h2>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            + FOOD
-            </button>
-            <script>$('#myModal').on('shown.bs.modal', function () {
-                    $('#myInput').trigger('focus')
-                  })</script>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Add Food in your stock!</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+
+<div class="sidenav">
+  <div class="vertical-center">
+  <p style="color: #f1f1f1; text-align: center; font-size:28px">Menu</p> <br>
+  <a href="index.html">About</a>
+  <a href="myFood.html">My Food</a>
+  <a href="recipes.html">Recipes</a>
+  <a href="creators.html">Creators</a>
+  </div>
+</div>
+
+<div class="main">
+  <h2 style="text-align: center; font-family: 'Mansalva', cursive;font-size: 50px;">food * fairy</h2>
+  <h4 style="text-align: center; font-size: 16px;">Your zero-waste food manager. </h4> <br><br>
+  <h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    + FOOD
+    </button>
+    <script>$('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })</script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Food in your stock!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">
+                                Food item: 
+                            </span>
                         </div>
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">
-                                        What do you have?
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">
-                                        Expiration Date
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
-                  </div>
-                  <!-- Modal -->
-        </h2>
-        <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">
+                                Expiration Date: 
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    </h2>
+    <div class="row">
+        <table class="table">
+            <thead style="font-size: 30px;">
+                <tr>
+                    <th scope="col">
+                        Food
+                    </th>
+                    <th scope="col">
+                        Expiry date
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="overflow-auto">
             <table class="table">
-                <thead style="font-size: 30px;">
+                <tbody>
                     <tr>
-                        <th scope="col">
-                            Food
-                        </th>
-                        <th scope="col">
-                            Exp date
-                        </th>
+                        <td></td>
+                        <td>@mdo</td>
                     </tr>
-                </thead>
-            </table>
-            <div class="overflow-auto">
-                <table class="table">
-                    <tbody>
+                    <tr>
+                        <td>Jacob</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                            <td>Larry</td>
+                            <td>@twitter</td>
+                        </tr>
                         <tr>
-                            <td></td>
+                            <td>Mark</td>
                             <td>@mdo</td>
                         </tr>
                         <tr>
@@ -177,18 +191,6 @@ body {
                             <td>Larry</td>
                             <td>@twitter</td>
                         </tr>
-                        <tr>
-                                <td>Mark</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>Larry</td>
-                                <td>@twitter</td>
-                            </tr>
                     </tbody>
                 </table>
             </div>
