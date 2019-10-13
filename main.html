@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: "times";
+  font-family: 'Mansalva', cursive;
 }
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -17,6 +18,7 @@ body {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  padding-left: 5px;
 }
 
 .sidenav a {
@@ -31,9 +33,17 @@ body {
   color: #f1f1f1;
 }
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 24px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -46,20 +56,19 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="about.html">About</a>
+  <div class="vertical-center">
+  <p style="color: #f1f1f1; text-align: center; font-size:28px">Menu</p> <br>
+  <a href="main.html">About</a>
   <a href="recipes.html">Recipes</a>
   <a href="myFood.html">My Food</a>
-  <a href="#contact">Contact</a>
+  <a href="creators.html">Creators</a>
+  </div>
 </div>
 
 <div class="main">
-  <h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <h2 style="text-align: center;">food * fairy</h2>
+  <h4 style="text-align: center;">Your zero-waste food manager. </h4> <br>
+  <p>text</p>
 </div>
    
 </body>
