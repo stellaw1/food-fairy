@@ -47,33 +47,12 @@ body {
 }
 
 .main {
-  margin-left: 250px; /* Same as the width of the sidenav */
+  margin-left: 350px; /* Same as the width of the sidenav */
   font-size: 24px; 
   padding: 0px 30px;
   padding-right: 150px; 
 }
 
-.btn{
-    margin: 5px;
-    padding: 10px;
-    text-align: center;
-    background-color: goldenrod;
-    border-color: transparent;
-}
-.btn:hover{
-    background-color: darkgoldenrod;
-    border-color: transparent;
-}
-.overflow-auto{
-    position:fixed;
-    margin: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* padding-left: 30px;
-    padding-right:50px; */
-    width: 70%;
-    height: 70%;
-}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 0px;}
   .sidenav a {font-size: 18px;}
@@ -103,11 +82,11 @@ body {
         $('#myInput').trigger('focus')
     })</script>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Food in your stock!</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add food item...</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -139,7 +118,7 @@ body {
     </div>
     <!-- Modal -->
     </h2>
-    <div class="row">
+    <div class="row" tabindex="-1">
         <table class="table">
             <thead style="font-size: 30px;">
                 <tr>
