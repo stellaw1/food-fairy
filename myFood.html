@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <style>
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -50,6 +52,28 @@ body {
   padding: 0px 30px;
 }
 
+.btn{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: goldenrod;
+    border-color: transparent;
+}
+.btn:hover{
+    background-color: darkgoldenrod;
+    border-color: transparent;
+}
+
+.overflow-auto{
+    position:fixed;
+    margin: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* padding-left: 30px;
+    padding-right:50px; */
+    width: 70%;
+    height: 70%;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 0px;}
   .sidenav a {font-size: 18px;}
@@ -57,6 +81,7 @@ body {
 </style>
 </head>
 <body>
+    
     <div class="sidenav">
         <div class="vertical-center">
         <p style="color: #f1f1f1; text-align: center; font-size:28px">Menu</p> <br>
@@ -68,41 +93,105 @@ body {
       </div>
       
       <div class="main">
-        <h2><button type="button" class="btn btn-outline-warning">+ FOOD</button></h2>
+        <h2>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            + FOOD
+            </button>
+            <script>$('#myModal').on('shown.bs.modal', function () {
+                    $('#myInput').trigger('focus')
+                  })</script>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Add Food in your stock!</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">
+                                        What do you have?
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">
+                                        Expiration Date
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal -->
+        </h2>
         <div class="row">
             <table class="table">
-            <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Food</th>
-                            <th scope="col">Number</th>
-                            <th scope="col">Exp date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
+                <thead style="font-size: 30px;">
+                    <tr>
+                        <th scope="col">
+                            Food
+                        </th>
+                        <th scope="col">
+                            Exp date
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="overflow-auto">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td></td>
                             <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
+                        </tr>
+                        <tr>
                             <td>Jacob</td>
-                            <td>Thornton</td>
                             <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
+                        </tr>
+                        <tr>
                             <td>Larry</td>
-                            <td>the Bird</td>
                             <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                                <td>Mark</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>Larry</td>
+                                <td>@twitter</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        
-          
-            
-</body>
-</html>
+    </body>
+    </html>
