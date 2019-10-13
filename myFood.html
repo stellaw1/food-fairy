@@ -1,66 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<style>
-body {
-  font-family: 'Be Vietnam', sans-serif;
-}
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Be Vietnam", sans-serif;
+      }
 
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(188, 204, 228);
-  overflow-x: hidden;
-  padding-top: 20px;
-  padding-left: 5px;
-}
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(188, 204, 228);
+        overflow-x: hidden;
+        padding-top: 20px;
+        padding-left: 5px;
+      }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+      }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+      .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
 
-.main {
-  margin-left: 350px; /* Same as the width of the sidenav */
-  font-size: 24px; 
-  padding: 0px 30px;
-  padding-right: 150px; 
-}
+      .main {
+        margin-left: 350px; /* Same as the width of the sidenav */
+        font-size: 24px;
+        padding: 0px 30px;
+        padding-right: 150px;
+      }
+      .btn {
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        background-color: goldenrod;
+        border-color: transparent;
+      }
+      .btn:hover {
+        background-color: darkgoldenrod;
+        border-color: transparent;
+      }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 0px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
+      .overflow-auto {
+        position: fixed;
+        /* padding-left: 30px;
+    padding-right:50px; */
+        width: 60%;
+        height: 70%;
+      }
 
+<<<<<<< HEAD
 <div class="sidenav">
   <div class="vertical-center">
   <p style="color: #f1f1f1; text-align: center; font-size:28px">
@@ -70,109 +108,186 @@ body {
   <a href="creators.html">Creators</a>
   </div>
 </div>
-
-<div class="main">
-  <h2 style="text-align: center; font-family: 'Mansalva', cursive;font-size: 50px;">food * fairy</h2>
-  <h4 style="text-align: center; font-size: 16px;">Your zero-waste food manager. </h4> <br><br>
-  <h2>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    + FOOD
-    </button>
-    <script>$('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    })</script>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add food item...</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">
-                                Food item: 
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">
-                                Expiration Date: 
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
+=======
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 0px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="vertical-center">
+        <p style="color: #f1f1f1; text-align: center; font-size:28px">Menu</p>
+        <br />
+        <a href="index.html">About</a>
+        <a href="myFood.html">My Food</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="creators.html">Creators</a>
+      </div>
     </div>
-    <!-- Modal -->
-    </h2>
-    <div class="row" tabindex="-1">
-        <table class="table">
-            <thead style="font-size: 30px;">
-                <tr>
-                    <th scope="col">
-                        Food
-                    </th>
-                    <th scope="col">
-                        Expiry date
-                    </th>
-                </tr>
-            </thead>
-        </table>
-        <div class="overflow-auto">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                            <td>Larry</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <td>Mark</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>Larry</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <td>Mark</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>Larry</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+>>>>>>> 7740b91ad846d82ebcda76081b1a51c06ce9b8f5
+
+    <div class="main">
+      <h2
+        style="text-align: center; font-family: 'Mansalva', cursive;font-size: 50px;"
+      >
+        food * fairy
+      </h2>
+      <h4 style="text-align: center; font-size: 16px;">
+        Your zero-waste food manager.
+      </h4>
+      <h2>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          + FOOD
+        </button>
+        <script>
+          $("#myModal").on("shown.bs.modal", function() {
+            $("#myInput").trigger("focus");
+          });
+        </script>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Add food item...
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text"
+                      id="inputGroup-sizing-default"
+                    >
+                      Food item:
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text"
+                      id="inputGroup-sizing-default"
+                    >
+                      Expiry Date:
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-    </body>
-    </html>
+        <!-- Modal -->
+      </h2>
+      <div class="row">
+        <table class="table">
+          <thead style="font-size: 30px;">
+            <tr>
+              <th scope="col">
+                Food
+              </th>
+              <th scope="col">
+                Expiry date
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="row">
+        <div class="overflow-auto">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Avocadoes</td>
+                <td>10/17/19</td>
+              </tr>
+              <tr>
+                <td>Lime</td>
+                <td>10/19/19</td>
+              </tr>
+              <tr>
+                <td>Yogurt</td>
+                <td>10/19/19</td>
+              </tr>
+              <tr>
+                <td>Granola</td>
+                <td>10/25/19</td>
+              </tr>
+              <tr>
+                <td>Strawberries</td>
+                <td>10/26/19</td>
+              </tr>
+              <tr>
+                <td>Ground Beef</td>
+                <td>10/28/19</td>
+              </tr>
+              <tr>
+                <td>Eggs</td>
+                <td>10/28/19</td>
+              </tr>
+              <tr>
+                <td>Broccoli</td>
+                <td>10/28/19</td>
+              </tr>
+              <tr>
+                <td>Milk</td>
+                <td>10/30/19</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
