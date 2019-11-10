@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -35,51 +36,6 @@
       crossorigin="anonymous"
     ></script>
     <style>
-        body {
-          font-family: 'Be Vietnam', sans-serif;
-        }
-        
-        .sidenav {
-          height: 100%;
-          width: 200px;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: rgb(188, 204, 228);
-          overflow-x: hidden;
-          padding-top: 20px;
-          padding-left: 5px;
-        }
-        
-        .sidenav a {
-          padding: 6px 8px 6px 16px;
-          text-decoration: none;
-          font-size: 25px;
-          color: #818181;
-          display: block;
-        }
-        
-        .sidenav a:hover {
-          color: #f1f1f1;
-        }
-        
-        .vertical-center {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-        }
-        
-        .main {
-          margin-left: 350px;
-          font-size: 24px; 
-          padding: 0px 30px;
-          padding-right: 150px; 
-        }
-
-        
       .btn {
         margin: 5px;
         padding: 10px;
@@ -97,18 +53,12 @@
         width: 60%;
         height: 70%;
       }
-        
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 0px;}
-          .sidenav a {font-size: 18px;}
-        }
         </style>
         </head>
         <body>
         
         <div class="sidenav">
           <div class="vertical-center">
-          <p style="color: #f1f1f1; text-align: center; font-size:28px">
           <a href="index.html">About</a>
           <a href="myFood.html">My Food</a>
           <a href="recipes.html">Recipes</a>
@@ -118,10 +68,10 @@
 
 
     <div class="main">
-      <h2 style="text-align: center; font-family: 'Mansalva', cursive;font-size: 50px;">
+      <h2 id="logo">
         food * fairy
       </h2>
-      <h4 style="text-align: center; font-size: 16px;">
+      <h4 id="motto">
         Your zero-waste food manager.
       </h4>
       <h2>
